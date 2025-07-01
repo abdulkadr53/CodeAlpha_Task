@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Responsive Image Gallery</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <h1>Responsive Image Gallery</h1>
+
+  <div class="filter-buttons">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="nature">Nature</button>
+    <button class="filter-btn" data-filter="city">City</button>
+    <button class="filter-btn" data-filter="people">People</button>
+  </div>
+
+<div class="gallery">
+  <div class="gallery-item" data-category="nature" onclick="openModal();currentSlide(1)">
+    <img src="pics/N1.jpg" alt="Nature Image 1" />
+  </div>
+  <div class="gallery-item" data-category="nature" onclick="openModal();currentSlide(2)">
+    <img src="pics/N2.jpg" alt="Nature Image 2" />
+  </div>
+  <div class="gallery-item" data-category="nature" onclick="openModal();currentSlide(3)">
+    <img src="pics/N3.jpg" alt="Nature Image 3" />
+  </div>
+  <div class="gallery-item" data-category="nature" onclick="openModal();currentSlide(4)">
+    <img src="pics/N4.jpg" alt="Nature Image 4" />
+  </div>
+
+  <div class="gallery-item" data-category="city" onclick="openModal();currentSlide(5)">
+    <img src="pics/C1.jpg" alt="City Image 1" />
+  </div>
+  <div class="gallery-item" data-category="city" onclick="openModal();currentSlide(6)">
+    <img src="pics/C2.jpg" alt="City Image 2" />
+  </div>
+  <div class="gallery-item" data-category="city" onclick="openModal();currentSlide(7)">
+    <img src="pics/C3.jpg" alt="City Image 3" />
+  </div>
+
+  <div class="gallery-item" data-category="people" onclick="openModal();currentSlide(8)">
+    <img src="pics/p1.jpg" alt="People Image 1" />
+  </div>
+  <div class="gallery-item" data-category="people" onclick="openModal();currentSlide(9)">
+    <img src="pics/p2.jpg" alt="People Image 2" />
+  </div>
+  <div class="gallery-item" data-category="people" onclick="openModal();currentSlide(10)">
+    <img src="pics/p3.jpg" alt="People Image 3" />
+  </div>
+  <div class="gallery-item" data-category="people" onclick="openModal();currentSlide(11)">
+    <img src="pics/p4.jpg" alt="People Image 4" />
+  </div>
+  <div class="gallery-item" data-category="people" onclick="openModal();currentSlide(12)">
+    <img src="pics/p5.jpg" alt="People Image 5" />
+  </div>
+  <div class="gallery-item" data-category="people" onclick="openModal();currentSlide(13)">
+    <img src="pics/p6.jpg" alt="People Image 6" />
+  </div>
+  <div class="gallery-item" data-category="people" onclick="openModal();currentSlide(14)">
+    <img src="pics/p7.jpg" alt="People Image 7" />
+  </div>
+  <div class="gallery-item" data-category="people" onclick="openModal();currentSlide(15)">
+    <img src="pics/p8.jpg" alt="People Image 8" />
+  </div>
+  <div class="gallery-item" data-category="people" onclick="openModal();currentSlide(16)">
+    <img src="pics/p9.jpg" alt="People Image 9" />
+  </div>
+  <div class="gallery-item" data-category="people" onclick="openModal();currentSlide(17)">
+    <img src="pics/p10.jpg" alt="People Image 10" />
+  </div>
+  <div class="gallery-item" data-category="people" onclick="openModal();currentSlide(18)">
+    <img src="pics/p11.jpg" alt="People Image 11" />
+  </div>
+</div>
+
+
+<div id="myModal" class="modal">
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
+
+    <div class="mySlides"><img src="pics/N1.jpg" /></div>
+    <div class="mySlides"><img src="pics/N2.jpg" /></div>
+    <div class="mySlides"><img src="pics/N3.jpg" /></div>
+    <div class="mySlides"><img src="pics/N4.jpg" /></div>
+
+    <div class="mySlides"><img src="pics/C1.jpg" /></div>
+    <div class="mySlides"><img src="pics/C2.jpg" /></div>
+    <div class="mySlides"><img src="pics/C3.jpg" /></div>
+
+    <div class="mySlides"><img src="pics/p1.jpg" /></div>
+    <div class="mySlides"><img src="pics/p2.jpg" /></div>
+    <div class="mySlides"><img src="pics/p3.jpg" /></div>
+    <div class="mySlides"><img src="pics/p4.jpg" /></div>
+    <div class="mySlides"><img src="pics/p5.jpg" /></div>
+    <div class="mySlides"><img src="pics/p6.jpg" /></div>
+    <div class="mySlides"><img src="pics/p7.jpg" /></div>
+    <div class="mySlides"><img src="pics/p8.jpg" /></div>
+    <div class="mySlides"><img src="pics/p9.jpg" /></div>
+    <div class="mySlides"><img src="pics/p10.jpg" /></div>
+    <div class="mySlides"><img src="pics/p11.jpg" /></div>
+
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+</div>
+
+<div class="Footer_copyright__YRXDv">© 2025 Abdulkadr</div>
+  <script src="javascript.js"></script>
+</body>
+</html>

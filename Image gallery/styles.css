@@ -1,0 +1,226 @@
+body {
+  font-family: Arial, sans-serif, 'Times New Roman';
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  background: rgba(166, 165, 167, 0.699);
+}
+
+h1 {
+  margin: 20px;
+  font-size: 2rem;
+}
+
+.filter-buttons {
+  margin: 20px;
+}
+
+.filter-btn {
+  padding: 10px 20px;
+  margin: 5px;
+  border: none;
+  background: #333;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+  background-color: #1b6a8f;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px;
+}
+
+.gallery-item {
+  width: 250px;
+  height: 200px;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  animation: fadeIn 0.5s ease-in-out;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.gallery-item:hover {
+  transform: scale(1.10);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.gallery-item.hide {
+  opacity: 0;
+  transform: scale(0.9);
+  pointer-events: none;
+}
+
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.9);
+  animation: modalFadeIn 0.5s ease forwards;
+}
+
+.modal-content {
+  position: relative;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  max-width: 800px;
+  z-index: 11;
+}
+
+.mySlides {
+  display: none;
+  opacity: 0;
+  width: 100%;
+  text-align: center;
+  transition: opacity 0.4s ease;
+}
+
+.mySlides.active-slide {
+  display: block;
+  opacity: 1;
+}
+
+.mySlides img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.close:hover {
+  color: #ccc;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 30px;
+  user-select: none;
+  transform: translateY(-50%);
+  transition: background 0.3s;
+  z-index: 12;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+.prev:hover, .next:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.75); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes fadeEffect {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes modalFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Accessibility Focus Styles */
+.filter-btn:focus,
+.gallery-item:focus,
+.close:focus,
+.prev:focus,
+.next:focus {
+  outline: 2px solid #1b6a8f;
+  outline-offset: 2px;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+  .gallery-item {
+    width: 45%;
+    height: auto;
+  }
+
+  .modal-content {
+    width: 90%;
+  }
+
+  .prev, .next {
+    font-size: 26px;
+    padding: 12px;
+  }
+
+  .close {
+    font-size: 32px;
+    right: 20px;
+    top: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-item {
+    width: 90%;
+  }
+
+  .modal-content {
+    width: 95%;
+  }
+
+  .prev, .next {
+    font-size: 24px;
+    padding: 10px;
+  }
+
+  .close {
+    font-size: 28px;
+    right: 15px;
+    top: 10px;
+  }
+}
+
+
