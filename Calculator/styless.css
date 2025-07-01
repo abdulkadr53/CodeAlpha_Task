@@ -1,0 +1,87 @@
+body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color:white;
+      font-family: Arial, sans-serif;
+    }
+    .calculator {
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+      background-color:grey;
+      padding: 20px;
+      width: 340px;
+    }
+    .display {
+      width: 100%;
+      height: 60px;
+      font-size: 2rem;
+      text-align: right;
+      padding: 10px;
+      margin-bottom: 10px;
+      background-color:burlywood;
+      color: white;
+      border: none;
+      border-radius: 5px;
+    }
+    .mode-toggle {
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: 10px;
+    }
+    .buttons {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 10px;
+    }
+    .buttons button {
+      height: 60px;
+      font-size: 1.2rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .buttons button:hover {
+      background-color: #add;
+    }
+    .operator {
+      background-color: #f9a825;
+      color: white;
+    }
+    .equals {
+      background-color: #0b5;
+      color: white;
+      grid-column: span 2;
+    }
+    .clear {
+      background-color: #d32f2f;
+      color: white;
+      grid-column: span 1;
+    }
+    .history {
+      margin-top: 15px;
+      background: #f8f8f8;
+      padding: 10px;
+      border-radius: 5px;
+      font-size: 0.9rem;
+      max-height: 120px;
+      overflow-y: auto;
+    }
+    .history h3 {
+      margin: 0 0 5px 0;
+      font-size: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .history button {
+      background: #d32f2f;
+      color: white;
+      border: none;
+      border-radius: 3px;
+      padding: 2px 8px;
+      cursor: pointer;
+      font-size: 0.8rem;
+    }
